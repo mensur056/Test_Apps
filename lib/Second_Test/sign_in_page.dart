@@ -7,7 +7,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SignInPage'),
+        title: const Text('SignIn Page'),
       ),
       body: Container(),
     );

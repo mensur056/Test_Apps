@@ -7,7 +7,7 @@ class HomePageTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomePageTwo'),
+        title: const Text('Home PageTwo'),
       ),
       body: Container(),
     );
