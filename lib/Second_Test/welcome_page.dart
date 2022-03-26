@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
-  WelcomePage(this.userName, {Key? key}) : super(key: key);
-  String userName;
+
+   final String userName;
+
+   const WelcomePage( {required this.userName});
 
   @override
   Widget build(BuildContext context) {
