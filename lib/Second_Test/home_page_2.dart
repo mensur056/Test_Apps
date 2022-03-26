@@ -12,20 +12,21 @@ class HomePageTwo extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home PageTwo'),
       ),
-      body: Container(),
+      body: const Center(
+        child: Text(
+          'Flutter',
+          style: TextStyle(fontSize: 30),
+        ),
+      ),
     );
   }
 
   _openSignPage(BuildContext context) {
-    _openPage(context, const SignInPage());
+    _openPage(context,  SignInPage());
   }
 
   _openWelcomePage(BuildContext context) {
-    _openPage(
-        context,
-        const WelcomePage(
-          userName: '',
-        ));
+    _openPage(context, WelcomePage(null));
   }
 
   _openPage(BuildContext context, Widget page) {

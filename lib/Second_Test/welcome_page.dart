@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class WelcomePage extends StatelessWidget {
 
-   final String userName;
+    String? userName;
 
-   const WelcomePage( {required this.userName});
+    WelcomePage( this.userName, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
