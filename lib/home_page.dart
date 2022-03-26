@@ -1,9 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:test_apps/second_page.dart';
+
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
+  TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: const Text('Home Page'),
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            TextField(
+              controller: _controller,
+            ),
+            FlatButton(
+                onPressed: () {
+                  _openSecondPage(context);
+                },
+                child: Container(
+                  child: const Text('Go to SecondPage'),
+                  color: Colors.green,
+                ))
+          ],
+        ),
+      ),
+    );
+  }
+
+  _openSecondPage(BuildContext context) {
+    MaterialPageRoute pageWay =
+        MaterialPageRoute(builder: (BuildContext context) {
+      return SecondPage(_controller.text);
+    });
+    Navigator.push(context, pageWay);
   }
 }
